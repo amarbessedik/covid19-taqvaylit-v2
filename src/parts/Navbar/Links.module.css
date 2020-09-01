@@ -1,0 +1,42 @@
+.links{
+    display: flex;
+}
+.links ul{
+    display: flex;
+    list-style: none;
+}
+.links ul li{
+    margin: 0 10px;
+}
+.links ul li:last-child{
+    margin-right: 0;
+}
+.links ul li a{
+    text-decoration: none;
+    color: var(--lightGray);
+    font-size: .9rem;
+}
+.links ul li a::after{
+  content: '';
+  display: block;
+  border-bottom: 1.5px solid var(--bcolor);
+  width: 0;
+  /* right: 0; */
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+.links ul li a:hover{
+    color: var(--bcolor);
+    -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+.links ul li a:hover::after{
+    width: 100%;
+}
+
+.list__item{
+    padding: 10px !important;
+}
+.list__item:hover{
+    background: var(--bg);
+}

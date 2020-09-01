@@ -1,0 +1,12 @@
+.lineGraph__buttons{
+    display: flex;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.lineGraph__buttons span{
+    margin: 0 5px;
+
+}

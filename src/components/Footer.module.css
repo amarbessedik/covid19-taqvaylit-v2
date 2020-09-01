@@ -1,0 +1,21 @@
+.footer{
+    background: #20232a;
+    padding: 20px;
+    color: #61dafb;
+    display: flex;
+    justify-content: center;
+}
+.footer__list{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none; 
+}
+
+@media screen and(width: 750px){
+    .footer__list{
+        font-size: 90%;
+    }
+}

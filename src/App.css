@@ -1,0 +1,207 @@
+body,
+html {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.app__map {
+  margin-top: 75px;
+  padding: 0 2% 40px 2%;
+  background: #20232a;
+}
+
+.app {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin: auto;
+}
+.app__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.app__header h1 {
+  color: #61dafb;
+  font-size: 1.8rem;
+}
+.app__dropdown {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 35vw;
+  margin: auto;
+  top: 7vh;
+}
+.form__dropdown {
+  background: #fff;
+  width: 35vw;
+  height: 100%;
+  border-radius: 5px;
+}
+.form__dropdown:focus {
+  outline: none !important;
+}
+.app__table__header {
+  text-align: center;
+}
+.MuiCardContent-root h3 {
+  margin-block-start: 20px !important;
+  margin-block-end: 20px !important;
+}
+.app__graph {
+  margin: 40px auto;
+  text-align: center;
+}
+.app {
+  width: 30vw;
+  margin-top: 20px;
+}
+.app .MuiPaper-root {
+  box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5);
+}
+.app__info__stats {
+  padding: 3px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 22.5vh;
+  right: 3vw;
+  box-shadow: 0 0 15px -4px #555;
+  border-radius: 5px;
+  margin-left: 40px;
+  height: fit-content;
+  width: 140px;
+}
+
+.app__graph__table {
+  width: 75vw;
+  margin: auto;
+  box-shadow: 0 0 15px -4px #555;
+  margin-top: 50px;
+}
+
+@media (max-width: 1165px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__info__stats {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 75vw;
+    position: relative;
+    height: fit-content;
+    margin: 0 auto;
+    top: 5vh;
+    margin-left: 120px;
+  }
+  .app__dropdown {
+    top: 52vh;
+  }
+  .app__map {
+    height: 30rem;
+  }
+}
+@media (max-width: 1024px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app__info__stats {
+    justify-content: space-between;
+    flex-direction: row;
+    width: 75vw;
+    position: relative;
+    height: fit-content;
+    margin: 0 auto;
+    top: 5vh;
+    margin-left: 160px;
+  }
+  .app__dropdown {
+    top: 42vh;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .app__dropdown {
+    top: 55vh;
+  }
+  .app__info__stats{
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .app__header h1 {
+    font-size: 1.5rem;
+  }
+  .app__graph__table,
+  .app__info__stats {
+    width: 95vw;
+  }
+  .app__info__stats {
+    top: 10vh;
+  }
+  .app__graph__table {
+    margin-top: 110px;
+  }
+
+  .app__dropdown {
+    top: 75vh;
+    left: 25vw;
+  }
+  .form__dropdown {
+    width: 50vw;
+  }
+  .app__map {
+    margin-top: 75px;
+    padding: 0 3% 40px 3%;
+    height: 30rem;
+  }
+}
+@media (max-width: 500px) {
+    .app__info__stats {
+    width: 95vw;
+    position: relative;
+    height: fit-content;
+    margin: 0 auto;
+    top: 8vh;
+    margin-left: 20px;
+  }
+   .app__dropdown {
+    top: 70vh;
+  }
+}
+@media (max-width: 375px) {
+    .app__info__stats {
+    width: 95vw;
+    position: relative;
+    height: fit-content;
+    margin: 0 auto;
+    top: 8vh;
+    margin-left: 20px;
+  }
+   .app__dropdown {
+    top: 85vh;
+  }
+}
+@media (max-width: 300px) {
+    .app__info__stats {
+    top: 15vh;
+    margin-left: 15px;
+    width: 95vw;
+  }
+   .app__dropdown {
+    top: 95vh;
+  }
+}
