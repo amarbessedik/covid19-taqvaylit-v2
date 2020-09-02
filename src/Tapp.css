@@ -1,12 +1,14 @@
-:root{
+:root {
   --bcolor: #61dafb;
-  --bg: rgba(55, 59, 68, 0.5);
-  --darkJungleGreen: #0D1B1E;
-  --independence: #5C5E78;
-  --middleRed: #E88873;
-  --cultured: #F5F5F5;
-  --lightGray: #CFD0D6;
+  --bg: #1e2227;
+  --darkJungleGreen: #0d1b1e;
+  --independence: #5c5e78;
+  --middleRed: #e88873;
+  --cultured: #f5f5f5;
+  --lightGray: #cfd0d6;
+  --lavenderWeb: #dae0f2;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +18,8 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 body,
@@ -24,6 +27,7 @@ html {
   height: 100%;
   width: 100%;
   background: var(--cultured);
+  scroll-behavior: smooth;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -32,28 +36,36 @@ code {
 
 .app {
   box-sizing: border-box;
-  margin: auto; 
+  margin: auto;
   min-height: 100vh;
   /* width: 98vw; */
 }
 
-.app__stats{
-      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+.app__stats {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .map {
@@ -100,16 +112,25 @@ code {
 }
 .app__bottom {
   margin: auto;
-  width: 97vw;
-  border: 1px solid red;
+  background: var(--lightGray);
+  background: linear-gradient(to right ,#20232a, #444);
+  /* width: 97vw; */
+  /* border: 1px solid red; */
+}
+.about{
+  color: #aaa;
+  color: var(--lavenderWeb);
 }
 .about,
 .footer {
-  margin: 10px auto;
-  width: 95vw;
-  border: 1px solid;
+  margin: 0 auto;
+  padding: 5vh;
+  /* border: 1px solid; */
 }
-
+.footer {
+  background: var(--darkJungleGreen);
+  color: var(--lavenderWeb);
+}
 /* media queries */
 @media screen and (max-width: 1024px) {
   .app__stats__content,

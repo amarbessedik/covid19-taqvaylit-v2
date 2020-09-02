@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import logo from "../../images/logo.png";
 import links from "../../data";
@@ -7,7 +7,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
 // toggleLinks >>> navbar & sidebar links
-const Navbar = ({ updateSidebarVisibility, toggleLinks, dropdownToggle }) => {
+const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdownToggle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () =>{
@@ -15,13 +15,27 @@ const Navbar = ({ updateSidebarVisibility, toggleLinks, dropdownToggle }) => {
     updateSidebarVisibility();
   }
 
+  useEffect(() => {
+    if (menuOpen && screenBreakpoint) {
+      setMenuOpen(false);
+      updateSidebarVisibility();
+    }
+  }, [screenBreakpoint, menuOpen, updateSidebarVisibility]);
+  
+
+  useEffect(()=>{
+    menuOpen
+      ? (document.body.style.overflowY = "hidden")
+      : document.body.style.overflowY = 'visible';
+  })
+
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__content}>
         <div className={styles.logo}>
           <div className={styles.logo__content}>
             <img src={logo} alt="logo" />
-            <h6>AMḌFAR AGREƔLAN W ANFAFAD AMAYNUT N CURUNA 19</h6>
+            <h6>AMḌFAR AGREƔLAN N ANFAFAD AMAYNUT N CURUNA (COVID-19)</h6>
           </div>
         </div>
         <div className={styles.links}>
@@ -33,10 +47,10 @@ const Navbar = ({ updateSidebarVisibility, toggleLinks, dropdownToggle }) => {
             className={styles.hamburger__menu}
           >
             <div onClick={handleClick} className={styles.hamburger__container}>
-              {!menuOpen ? (
-                <MenuIcon className={styles.menu__icon} />
-              ) : (
+              {menuOpen ? (
                 <CloseIcon className={styles.menu__icon} />
+              ) : (
+                <MenuIcon className={styles.menu__icon} />
               )}
             </div>
           </div>

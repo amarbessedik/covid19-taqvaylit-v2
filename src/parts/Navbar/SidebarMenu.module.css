@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
     transition: all ease-in-out 700ms;
@@ -18,4 +18,5 @@
     background: var(--darkJungleGreen);
     display: flex;
     padding: 60px 10px;
+    z-index: 20;
 }
