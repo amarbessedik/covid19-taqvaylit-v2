@@ -1,0 +1,60 @@
+.app__about h1{
+  margin-bottom: 40px;
+  color: var(--lavenderWeb);
+}
+
+.app__about a{
+    text-decoration: none;
+    color: var(--middleRed);
+}
+.app__about a:hover{
+    color: #fff;
+}
+.app__about ol{
+    margin: 15px 30px;
+}
+.app__about ol li{
+    width: fit-content;
+}
+.app__about ol li a{
+    display: block;
+    margin: 5px;
+    font-size: .9rem;
+}
+
+.about__dictionary{
+    margin-left: 20px;
+    font-size: .9rem;
+    margin-top: 15px;
+}
+.about__dictionary ul li{
+  margin: 5px 0;
+}
+
+.link__icon{
+    /* border: 1px solid; */
+    box-sizing: content-box;
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: rotation 5s infinite linear;
+    /* color: var(--bcolor); */
+    box-shadow: 0 0 12px -4px #ddd;
+}
+
+@media screen and (max-width: 768px){
+  /* .app__about{
+    width: 97vw;
+  } */
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

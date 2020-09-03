@@ -3,7 +3,9 @@ import "./Tapp.css";
 import ScrollTop from "./components/ScrollTop";
 import Navbar from "./parts/Navbar/Navbar";
 import SidebarMenu from "./parts/Navbar/SidebarMenu";
-import z from './images/z.webp';
+import About from "./parts/About/About";
+import MultiLangDictionary from "./parts/MultiLangDictionary/MultiLangDictionary";
+import Footer from "./parts/Footer/Footer";
 
 const Tapp = () => {
   const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -23,11 +25,9 @@ const Tapp = () => {
 
   const updateSidebarVisibility = () => {
     setSidebarVisible(!sidebarVisible);
-    // handleBreakpoint();
   };
 
-  useEffect(
-    () => {
+  useEffect(() => {
       window.addEventListener("scroll", () => {
         if (!dropdownToggle && window.pageYOffset > 315) {
           setDropdownToggle(true);
@@ -97,25 +97,14 @@ const Tapp = () => {
         </div>
       </div>
       <div className="app__bottom">
+        <div className="multi__lang__dictionary">
+          <MultiLangDictionary />
+        </div>
         <div className="about">
-          <h1>ARNU ẒER</h1>
-          <img src={z} alt="z" width="40px" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-            voluptas quidem itaque sed, illo a debitis dolores in repellat
-            deserunt culpa, possimus recusandae expedita maxime saepe obcaecati
-            incidunt ea odio. Nesciunt cumque culpa sit natus modi hic saepe
-            maxime. Dolore nemo deserunt id nesciunt. Explicabo sint doloremque
-            sit aut incidunt, dolore quis ullam. Voluptas, officia doloremque
-            architecto soluta eveniet doloribus? Reprehenderit id, labore ad, ea
-            maxime inventore quia incidunt velit atque, repudiandae neque nihil
-            ullam quasi impedit iure odio a distinctio laboriosam. Repellendus
-            officia et assumenda, necessitatibus culpa at temporibus.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore neque et necessitatibus, perferendis, saepe aut nostrum tempora eius, exercitationem maiores enim doloribus. Corporis aliquid amet ea ab necessitatibus corrupti aspernatur unde asperiores est? Reprehenderit rem nemo repellat doloremque iste velit?
-          </p>
+          <About />
         </div>
         <div className="footer">
-          <h1>footer</h1>
+         <Footer />
         </div>
       </div>
       <ScrollTop />
@@ -125,11 +114,3 @@ const Tapp = () => {
 
 export default Tapp;
 
-// ===============================
-// const handleDropdownToggling = () => {
-//   if (!dropdownToggle && window.pageYOffset > 315) {
-//     setDropdownToggle(true);
-//   } else if (dropdownToggle && window.pageYOffset <= 315) {
-//     setDropdownToggle(false);
-//   }
-// };

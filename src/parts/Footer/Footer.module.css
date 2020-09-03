@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__list{
+    list-style: none;
+    color: var(--lavenderWeb);
+}
+
+.footer__list h5{
+    margin: 10px 0;
+    color: rgb(147, 163, 145);
+}

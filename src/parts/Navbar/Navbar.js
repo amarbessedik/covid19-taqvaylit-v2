@@ -9,6 +9,7 @@ import CloseIcon from "@material-ui/icons/Close";
 // toggleLinks >>> navbar & sidebar links
 const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdownToggle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pageYOffset, setPageYOffset] = useState(false);
 
   const handleClick = () =>{
     setMenuOpen(!menuOpen);
@@ -29,8 +30,18 @@ const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdow
       : document.body.style.overflowY = 'visible';
   })
 
+  window.addEventListener('scroll', ()=>{
+    window.pageYOffset < 600 ? setPageYOffset(false) : setPageYOffset(true);
+  })
+
   return (
-    <div className={styles.navbar}>
+    <div
+      className={styles.navbar}
+      style={{
+        boxShadow:
+          pageYOffset ? "0 0 15px -4px #000" : "0 0 15px -4px #333",
+      }}
+    >
       <div className={styles.navbar__content}>
         <div className={styles.logo}>
           <div className={styles.logo__content}>
