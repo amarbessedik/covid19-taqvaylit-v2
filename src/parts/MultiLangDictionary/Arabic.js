@@ -25,7 +25,7 @@ function Arabic({ arabic }) {
           <li>ASEƔẒAN = البرمجيات</li>
           <li>UZDAY = رابط</li>
         </ul>
-      </div>
+      </div> 
     </div>
   );
 }

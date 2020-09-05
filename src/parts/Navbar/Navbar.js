@@ -6,7 +6,6 @@ import Links from "./Links";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-// toggleLinks >>> navbar & sidebar links
 const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdownToggle }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [pageYOffset, setPageYOffset] = useState(false);
@@ -38,15 +37,14 @@ const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdow
     <div
       className={styles.navbar}
       style={{
-        boxShadow:
-          pageYOffset ? "0 0 15px -4px #000" : "0 0 15px -4px #333",
+        boxShadow: pageYOffset ? "0 0 15px -4px #000" : "0 0 15px -4px #333",
       }}
     >
       <div className={styles.navbar__content}>
         <div className={styles.logo}>
           <div className={styles.logo__content}>
             <img src={logo} alt="logo" />
-            <h6>AMḌFAR AGREƔLAN N ANFAFAD AMAYNUT N CURUNA (COVID-19)</h6>
+            <h6>AMḌFAR AGREƔLAN N ANFAFAD N CURUNA WIS-2 (aCuW-2)</h6>
           </div>
         </div>
         <div className={styles.links}>

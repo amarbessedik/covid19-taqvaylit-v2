@@ -11,9 +11,15 @@ function Footer() {
     <div className={styles.footer}>
       <ul className={styles.footer__list}>
         <li style={center}>
-          <h4 style={{ padding: 0, marginBottom: "5px", color:'var(--middleRed)' }}>
+          <h4
+            style={{
+              padding: 0,
+              marginBottom: "5px",
+              color: "var(--middleRed)",
+            }}
+          >
             &copy;
-            <span>AMḌFAR AGREƔLAN N ANFAFAD AMAYNUT N CURUNA 19</span>{" "}
+            <span>AMḌFAR AGREƔLAN N ANFAFAD N CURUNA WIS-2 (aCuW-2)</span>{" "}
           </h4>
         </li>
         <li style={center}>
@@ -23,11 +29,11 @@ function Footer() {
               ? " - " + new Date().getFullYear()
               : null}
           </span>
-          
+
           <h5>amar.bessedik@gmail.com</h5>
         </li>
       </ul>
-      <br/>
+      <br />
       <ul className={styles.footer__list}>
         <li>
           <ShareButtons />

@@ -72,19 +72,6 @@ code {
     opacity: 1;
   }
 }
-
-.map {
-  border: 1px solid red;
-  height: 360px;
-  margin: auto;
-  width: 95vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.map h1 {
-  border: 1px solid;
-}
 .app__stats__content,
 .dropdown {
   margin: 5px auto;

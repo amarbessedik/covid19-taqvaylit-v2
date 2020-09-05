@@ -28,7 +28,7 @@ function French({french}) {
             <li>ASEƔẒAN = LOGICIEL</li>
             <li>UZDAY = LIEN</li>
           </ul>
-        </div>
+        </div> 
       </div>
     );
 }

@@ -44,10 +44,10 @@ function MultiLangDictionary() {
         {" "}
         AMAWAL - {english? 'DICTIONARY':null} { french?'DICTIONAIRE':null} {arabic?' قاموس':null} :{" "}
       </h2>
-      <ButtonGroup
+      <ButtonGroup  
         className={styles.language__chooser}
         variant="contained"
-        color=""
+        // color=""
         aria-label="contained button group"
       >
         <Button

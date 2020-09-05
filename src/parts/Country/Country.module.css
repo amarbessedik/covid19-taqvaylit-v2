@@ -1,0 +1,28 @@
+.country{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    box-shadow: 0 0 15px -4px #333;
+    
+}
+.country__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.country__image img{
+    width: 100%;
+    height: 100%;
+}
+.country__numbers{
+    border: 1px solid;
+    width: 100%;
+}
+.country__numbers ul{
+    list-style: none;
+}
+.country__numbers ul li{
+    margin: 5px;
+    font-size: .75rem;
+}

@@ -1,0 +1,52 @@
+.main {
+  width:80vw;
+  overflow:hidden;
+  /* background-color: #354B54; */
+  background-color: #dae0f2;
+  margin: .5em auto;
+  height: auto;
+  font-size: 1em;
+  /* color: #dae0f2; */
+  color: #354B54;
+  padding: 10px 5px;
+}
+.slide-right p {
+  -moz-animation: 10s slide-right;
+  -webkit-animation: 10s slide-right;
+  -o-animation: 10s slide-right;
+  animation: 10s slide-right;
+  margin:0;
+}
+.slide-left p {
+  -moz-animation: 10s slide-left;
+  -webkit-animation: 10s slide-left;
+  -o-animation: 10s slide-left;
+  animation: 10s slide-left;
+  margin:0;
+}
+
+
+@media screen and (max-width: 1024px){
+  .main {
+  width:95vw;
+  font-size: .85rem;
+}
+}
+
+@-webkit-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+@-moz-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+ @-o-keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+@keyframes slide-right { from { margin-left: 100%;width: 300%; }
+  to {margin-left: 0%;width: 100%;} }
+
+@-webkit-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@-moz-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@-o-keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }
+@keyframes slide-left { from {margin-left: 0%;width: 100%;}
+ to {margin-left: -100%;width: 300%;} }

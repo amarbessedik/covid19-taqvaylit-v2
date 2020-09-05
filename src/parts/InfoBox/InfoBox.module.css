@@ -1,0 +1,81 @@
+.infoBox {
+  box-sizing: border-box !important;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  width: 33.33%;
+  box-shadow: 0 0 12px -4px #777!important;
+}
+.infoBox:hover {
+  background: var(--charlestonGreen) !important; 
+  box-shadow: 0 0 12px -4px #000!important;
+  color: #fff!important;
+}
+
+.infoBox:hover .infoBox__title,
+.infoBox:hover .infoBox__total{
+  color: #fff !important;
+}
+
+.infoBox:nth-child(even){
+  margin: 0 3px;
+}
+.infoBox__title,
+.infoBox__cases,
+.infoBox__total {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  /* color: #61dafb !important; */
+  color: var(--charlestonGreen)!important;
+}
+
+.MuiCardContent-root h2 {
+  padding: 0 !important;
+}
+
+.infoBox__total,
+.infoBox__title {
+  font-size: 0.75rem !important;
+  /* text-shadow: 0 0 10px -5px rgba(0, 0, 0, 1) !important; */
+  font-weight: 400 !important;
+}
+
+.border__red {
+  border: 3px solid #f32c2c !important;
+}
+.border__green {
+  border: 3px solid rgb(61, 235, 191) !important;
+}
+.border__blue {
+  border: 3px solid rgb(13, 47, 241) !important;
+}
+.red {
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  /* padding: -4px; */
+}
+
+.blue {
+  font-size: 1rem;
+  color: #3ea0fc;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  /* padding: -4px; */
+}
+
+.green {
+  font-size: 1rem;
+  color: rgb(0, 218, 163);
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  /* padding: -4px; */
+}
+
+@media (max-width: 768px) {
+  
+}

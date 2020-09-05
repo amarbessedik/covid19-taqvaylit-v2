@@ -1,0 +1,59 @@
+.map {
+  height: 385px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-top: 16px;
+  /* box-shadow: 0 0 15px -4px rgba(0, 0, 0, 0.5); */
+  /* border: 1px solid red; */
+  margin: auto;
+  width: 99vw;
+}
+
+.map .leaflet-container {
+  height: 100%;
+  z-index: 0;
+}
+.popup__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.popup__flag {
+  height: 25px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  box-shadow: 0 0 2px 1px #ccc;
+  margin-right: 10px;
+}
+
+.popup__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  align-self: center;
+}
+
+.date__updated {
+  text-align: center;
+  color: #999;
+  border-bottom: 1px solid #aaa;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.popup__confirmed,
+.popup__recovered,
+.popup__fatalities {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .map {
+    height: 320px;
+  }
+}
+

@@ -28,7 +28,7 @@ function English({ english }) {
           <li>ASEƔẒAN = SOFTWARE</li>
           <li>UZDAY = LINK</li>
         </ul>
-      </div>
+      </div> 
     </div>
   );
 }
