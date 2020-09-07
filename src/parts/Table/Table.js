@@ -5,11 +5,25 @@ import numeral from "numeral";
 function Table({ countries }) {
   // console.log('countries from TABLE >>>>', countries);
   return (
-    <div id="tablee" className={styles.table__outer__container}>
+    <div id="table" className={styles.table__outer__container}>
+      <div id="_table" className="app__table__header">
+        <h3 style={{ textTransform: "uppercase" }}>
+          UṬṬUNEN SRID SI YELL TAMURT
+        </h3>
+        <span
+          style={{
+            display: "block",
+            textAlign: "center",
+            textTransform: "capitalize",
+          }}
+        >
+          (Asmerni N Uṭṭunen D Akewssar)
+        </span>
+      </div>
       <div className={styles.table__inner__container}>
         <div className={styles.table}>
           <table>
-            <tr>
+            <tr style={{ paddingLeft: "5px" }}>
               <th>TAMURT</th>
               <th>UṬṬUNEN URMIDEN</th>
               <th>WID YEMUTEN</th>
@@ -36,9 +50,7 @@ function Table({ countries }) {
                     <td>{numeral(deaths).format(0.0)}</td>
                     <td>{numeral(recovered).format(0.0)}</td>
                     <td>
-                      <strong style={{ color: "rgb(8, 201, 169)" }}>
-                        {numeral(cases).format(0.0)}
-                      </strong>
+                      <strong>{numeral(cases).format(0.0)}</strong>
                     </td>
                   </tr>
                 );

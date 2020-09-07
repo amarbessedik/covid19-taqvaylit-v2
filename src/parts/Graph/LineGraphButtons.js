@@ -1,5 +1,5 @@
 import React from "react";
-import { prettyPrintStat } from "../../util";
+import { prettyPrintStat } from "../../utils";
 import LineGraphButton from "./LineGraphButton";
 import styles from "./LineGraphButtons.module.css";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoBox from '../InfoBox/InfoBox';
 import styles from './Stats.module.css';
-import {prettyPrintStat} from '../../util';
+import {prettyPrintStat} from '../../utils';
 
 const Stats = ({ casesType, setCasesType, countryInfo }) => {
   return (

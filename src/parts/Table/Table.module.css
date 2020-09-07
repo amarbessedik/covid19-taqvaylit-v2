@@ -1,14 +1,12 @@
 table {
   margin-top: 20px;
-  color: #6a5d5d;
   background: #fff;
   width: 100%;
   margin: 0;
-  background: #333;
 }
 .table {
   overflow: auto;
-  max-height: 340px;
+  max-height: 590px;
   border-radius: 5px;
   
 }
@@ -20,6 +18,7 @@ table {
 
   .table::-webkit-scrollbar-track {
     border-radius: 2px;
+    background: #ccc;
   }
 
   .table::-webkit-scrollbar-thumb {
@@ -27,6 +26,7 @@ table {
     box-shadow: inset 0 0 6px rgba(153, 152, 152, 0.2);
     -webkit-box-shadow: inset 0 0 6px rgba(202, 198, 198, 0.404);
     transition: all 1s ease-in-out;
+    background: var(--charlestonGreen);
   }
 
   .table:hover::-webkit-scrollbar-thumb {
@@ -40,12 +40,13 @@ table {
 .table__outer__container{
  padding: 10px;
  border-radius: 5px;
- background: #333;
+ background: #fff;
 }
 .table__inner__container{
   padding: 10px;
  border-radius: 5px;
- background: #444;
+ background: #fff;
+ border: 1px solid #ccc;
 }
 tr {
   display: flex;
@@ -75,6 +76,7 @@ th {
 .flag {
   display: flex;
   width: 300px;
+  /* padding-left: 5px; */
 }
 
 .flag span {
@@ -89,15 +91,19 @@ th {
   border-radius: 2px;
 }
 tr:nth-of-type(even) {
-  background:rgba(67, 68, 68, 0.1);
+  /* background:rgba(67, 68, 68, 0.1);
+  background:#aec0c7; */
 }
 tr:nth-of-type(odd) {
   background:rgba(164, 167, 166, 0.1);
+  background:#f0f2f3;
 }
 tr:first-child{
-  background: rgba(3, 3, 3, 0.747);
+  background: var(--charlestonGreen);
   padding: 15px 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 td{
-  color: #ddd;
+  color: #555;
 }

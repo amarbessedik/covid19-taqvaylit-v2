@@ -15,7 +15,7 @@ import {
   Card,
   CardContent,
 } from "@material-ui/core";
-import { sortData, prettyPrintStat } from "./util";
+import { sortData, prettyPrintStat } from "./utils";
 import "leaflet/dist/leaflet.css";
 import AboutData from "./components/AboutData";
 

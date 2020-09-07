@@ -6,7 +6,7 @@ import SidebarMenu from "./parts/Navbar/SidebarMenu";
 import About from "./parts/About/About";
 import MultiLangDictionary from "./parts/MultiLangDictionary/MultiLangDictionary";
 import Footer from "./parts/Footer/Footer";
-import { sortData, prettyPrintStat } from "./util";
+import { sortData, prettyPrintStat } from "./utils";
 import Map from "./parts/Map/Map";
 import Stats from "./parts/Stats/Stats";
 import Table from "./parts/Table/Table";
@@ -38,7 +38,7 @@ const Tapp = () => {
     lat: 18.82746,
     lng: -5.4796,
   });
-  const [mapZoom, setMapZoom] = useState(1);
+  const [mapZoom, setMapZoom] = useState(2);
   //map countries
   const [mapCountries, setMapCountries] = useState([]);
   //cases types -> {cases, recovered, deaths}
@@ -159,9 +159,10 @@ const Tapp = () => {
     countrySubset.includes(entry.country)
   );
 
-  const filterCountries = (country, data) => {
-    return data.filter((entry) => entry.country === country);
-  };
+   const filterCountries = (country, data) => {
+     return { ...data.filter((entry) => entry.country === country)[0] };
+   };
+
 
   const preparedCountrySubset = [
     {
@@ -190,8 +191,6 @@ const Tapp = () => {
       image: mauritania
     },
   ];
-
-  console.log("preparedCountrySubset >>> ", preparedCountrySubset[0].data);
 
   return (
     <div className="app">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import { buildChartData, options, casesTypeColors } from "../util";
+import { buildChartData, options, casesTypeColors } from "../utils";
 // import styles from "./LineGraph.module.css";
 //buildChartDatasets
 

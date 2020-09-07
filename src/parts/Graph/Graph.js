@@ -39,21 +39,7 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
             <LineGraph casesType={casesType} location={country} />
           )}
           {/* country table */}
-          <div id="table" style={{ height: "80px" }}></div>
-          <div id="_table" className="app__table__header">
-            <h3 style={{ textTransform: "uppercase" }}>
-              UṬṬUNEN SRID SI YELL TAMURT
-            </h3>
-            <span
-              style={{
-                display: "block",
-                textAlign: "center",
-                textTransform: "capitalize",
-              }}
-            >
-              (Asmerni N Uṭṭunen D Akewssar)
-            </span>
-          </div>
+          {/* <div id="table" style={{ height: "80px" }}></div> */}
         </CardContent>
       </Card>
     </div>

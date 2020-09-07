@@ -1,5 +1,5 @@
 :root {
-  --bcolor: #049de4;
+  --bcolor: #33c5ee;
   --bg: #1e2227;
   --darkJungleGreen: #0d1b1e;
   --charlestonGreen: #17272C;
@@ -33,6 +33,7 @@ html {
   background: var(--cultured);
   scroll-behavior: smooth;
   /* font-weight: 400; */
+  overflow-x: hidden;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -41,7 +42,7 @@ code {
 
 .app {
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
   min-height: 100vh;
   /* width: 98vw; */
 }
@@ -74,22 +75,28 @@ code {
 }
 .app__stats__content,
 .dropdown {
-  margin: 5px auto;
+  /* margin: 5px auto; */
+  margin: 0 auto;
   width: 80vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
 }
 .app__left {
-  margin: 3px auto;
-  width: 74%;
-  border: 1px solid red;
+  /* margin: 3px auto; */
+  margin: 0 auto;
+  width: 75%;
+  /* border: 1px solid red; */
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .app__right {
-  margin: 3px auto;
+  /* margin: 3px auto; */
+  margin: 0 auto;
   width: 25%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 5px;
   /* height: 100%; */
 }
@@ -97,10 +104,11 @@ code {
 .app__left__stats,
 .app__left__table,
 .app__left__graph {
-  margin: 10px auto;
+  margin: 5px auto;
   width: 90%;
-  border: 1px solid;
+  /* border: 1px solid; */
   border-radius: 5px;
+  text-align: center;
 }
 .app__bottom {
   margin: 0 auto;
