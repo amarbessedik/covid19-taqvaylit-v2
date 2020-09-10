@@ -23,7 +23,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', sans-serif;
-  /* font-weight: 400; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 body,
@@ -31,20 +31,15 @@ html {
   height: 100%;
   width: 100%;
   background: var(--cultured);
+  background: rgba(247, 246, 246, 0.26);
   scroll-behavior: smooth;
-  /* font-weight: 400; */
   overflow-x: hidden;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .app {
   box-sizing: border-box;
   margin: 0 auto;
   min-height: 100vh;
-  /* width: 98vw; */
 }
 
 .app__stats {
@@ -82,43 +77,52 @@ code {
   display: flex;
   justify-content: center;
 }
-.app__left {
-  /* margin: 3px auto; */
-  margin: 0 auto;
-  width: 75%;
+.app__stats__content{
+  margin-bottom: 10px;
+}
+.app__left { 
+  width: 70vw;
   /* border: 1px solid red; */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* align-items: stretch; */
+  /* align-items: start; */
 }
 
 .chartjs-render-monitor{
   height: 480px !important;
-  /* width: 798px !important; */
   object-fit: contain !important;
 }
-
+.form__dropdown{
+  margin: 5px!important;
+  width: 35vw;
+}
+.MuiOutlinedInput-input {
+    padding: 12px!important;
+    background: #fff !important;
+}
 .app__right {
-  /* margin: 3px auto; */
-  margin: 0 auto;
-  width: 25%;
-  /* border: 1px solid red; */
+  margin: 0 0 0 10px;
+  width: 25vw;
   border-radius: 5px;
-  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
 }
 
 .app__left__stats,
 .app__left__table,
 .app__left__graph {
   margin: 5px auto;
-  width: 90%;
-  /* border: 1px solid; */
+  width: 100%;
   border-radius: 5px;
   text-align: center;
+  flex: 1;
 }
 .app__bottom {
   margin: 0 auto;
+  /* border: 2px solid red; */
 }
 .multi__lang__dictionary{
   color: var(--lavenderWeb);
@@ -127,7 +131,6 @@ code {
 }
 .about,
 .footer, .multi__lang__dictionary {
-  margin: 0 auto;
   padding: 5vh 10vw;
   background: var(--charcoal);
   color: var(--lavenderWeb);
@@ -140,12 +143,11 @@ code {
 @media screen and (max-width: 1024px) {
   .app__stats__content,
   .dropdown {
-    width: 90vw;
+    width: 95vw;
   }
 }
 @media screen and (max-width: 768px) {
   .multi__lang__dictionary, .about {
-    /* margin: 0 ; */
   padding: 1.5vw;
   }
   .app__stats__content {
@@ -164,4 +166,8 @@ code {
   .dropdown {
     width: 95vw;
   }
+  .form__dropdown{
+  width: 65vw;
+  /* height: 30px; */
+}
 }

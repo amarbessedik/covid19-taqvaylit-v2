@@ -8,7 +8,13 @@ function Table({ countries }) {
   return (
     <div id="table" className={styles.table__outer__container}>
       <div id="_table" className="app__table__header">
-        <h3 style={{ textTransform: "uppercase", color: '#777' }}>
+        <h3
+          style={{
+            textTransform: "uppercase",
+            color: "#777",
+            fontWeight: "400",
+          }}
+        >
           UṬṬUNEN SRID SI YELL TAMURT
         </h3>
         <span

@@ -18,8 +18,6 @@ import {
   FormControl,
   MenuItem,
   Select,
-  Card,
-  CardContent,
 } from "@material-ui/core";
 import northAmerica from "../src/images/north-america.jpg";
 import southAmerica from "../src/images/south-america.jpg";
@@ -43,7 +41,7 @@ const Tapp = () => {
   const [tableData, setTableData] = useState([]);
   //Map center
   const [mapCenter, setMapCenter] = useState({
-    lat: 18.82746,
+    lat: 25.82746,
     lng: -5.4796,
   });
   const [mapZoom, setMapZoom] = useState(2);
@@ -175,7 +173,6 @@ const Tapp = () => {
     getContinents();
   }, []);
 
-  // continents.length? console.log('continents >>> ', continents): console.log();
 
   const filterContinent = (name)=>{
     return continents?.filter(entry => entry.continent === name);
@@ -188,7 +185,7 @@ const Tapp = () => {
       image: northAmerica,
     },
     {
-      name: "Marikan N Wadda",
+      name: "Marikan B Wadda",
       data: filterContinent("South America")[0],
       image: southAmerica,
     },
@@ -198,12 +195,12 @@ const Tapp = () => {
       image: europe,
     },
     {
-      name: "Tafarka",
+      name: "Taferka",
       data: filterContinent("Africa")[0],
       image: africa,
     },
     {
-      name: "Asiya",
+      name: "Lazi",
       data: filterContinent("Asia")[0],
       image: asia,
     },

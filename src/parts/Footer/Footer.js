@@ -24,7 +24,7 @@ function Footer() {
         </li>
         <li style={center}>
           <span style={{ textTransform: "uppercase", fontSize: ".8rem" }}>
-            AJNYUR N ASEƔẒAN SƔUR AMAR BESSEDIK <br /> MARIKAN UFLLA, ƔUCT 2020{" "}
+            AJNYUR ASELEKIMAN AMAR BESSEDIK <br /> MARIKAN UFLLA, ƔUCT 2020{" "}
             {!new Date().getFullYear() === 2020
               ? " - " + new Date().getFullYear()
               : null}

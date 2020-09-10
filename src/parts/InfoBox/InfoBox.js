@@ -23,19 +23,11 @@ function InfoBox({
       isgreen={isgreen}
       onClick={props.onClick}
       className={styles.infoBox} 
-                   
-      // className={` ${styles.infoBox} 
-      //              ${
-      //                active &&
-      //                ((isBlue && styles.border__blue) ||
-      //                  (isGreen && styles.border__green) ||
-      //                  (isRed && styles.border__red))
-      //              }`}
     >
       <CardActionArea>
         <CardContent className={styles.infoBox__content}>
           {/* Title */}
-          <Typography className={styles.infoBox__title} color="textSecondary">
+          <Typography className={styles.infoBox__title}>
             {title}
           </Typography>
           {/* Number cases numeral(country.cases).format(0.0)*/} 

@@ -39,7 +39,7 @@ function MultiLangDictionary() {
   };
 
   return (
-    <div>
+    <div className={styles.multiLang__container}>
       <h2 style={{ color: "var(--middleRed)", marginBottom: "25px" }}>
         {" "}
         AMAWAL - {english? 'DICTIONARY':null} { french?'DICTIONAIRE':null} {arabic?' قاموس':null} :{" "}

@@ -1,14 +1,14 @@
 .main {
   width:80vw;
   overflow:hidden;
-  /* background-color: #354B54; */
-  background-color: #dae0f2;
+  background-color: #ffffff;
   margin: .5em auto;
   height: auto;
   font-size: 1em;
-  /* color: #dae0f2; */
   color: #354B54;
   padding: 10px 5px;
+  border-radius: 3px;
+  box-shadow: 0 0 7px -4px #999;
 }
 .slide-right p {
   -moz-animation: 10s slide-right;

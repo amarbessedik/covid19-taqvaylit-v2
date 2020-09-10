@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './Graph.module.css';
 import {
-  FormControl,
-  MenuItem,
-  Select,
   Card,
   CardContent,
 } from "@material-ui/core";
@@ -17,7 +14,14 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
       <Card>
         <CardContent>
           {/* graph */}
-          <h3 style={{ textTransform: "uppercase", color: '#777' }} className="app__graph">
+          <h3
+            style={{
+              textTransform: "uppercase",
+              color: "#777",
+              fontWeight: "400",
+            }}
+            className="app__graph"
+          >
             {adapteCasesType(casesType)} DEG MAḌAL AKIT
           </h3>
           <span
@@ -26,10 +30,10 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
               justifyContent: "center",
               alignItems: "center",
               textTransform: "capitalize",
-              color : '#777'
+              color: "#777",
             }}
           >
-             [ Uṭṭunen <TrendingUpIcon /> ]
+            [ Uṭṭunen <TrendingUpIcon /> ]
           </span>
           <LineGraphButtons
             countryInfo={countryInfo}

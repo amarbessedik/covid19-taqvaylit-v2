@@ -1,22 +1,25 @@
 .infoBox {
   box-sizing: border-box !important;
-  /* border-radius: 5px; */
-  /* border: 3px solid transparent; */
+  border: 1px solid #ddd;
   width: 33.33%;
-  box-shadow: 0 0 7px -4px #999!important;
-  height: 100px;
+  box-shadow: 0 0 10px -4px #999!important;
+  max-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: rgba(10, 79, 182, 0.541) !important;
+  /* background: transparent !important; */
+  /* opacity: 0.75; */
 }
 .infoBox:hover {
-  background: var(--charlestonGreen) !important; 
+  background: rgb(13, 74, 243) !important; 
   box-shadow: 0 0 12px -4px #000!important;
-  color: #fff!important;
+  /* color: #fff!important; */
 }
 
 .infoBox:hover .infoBox__title,
-.infoBox:hover .infoBox__total{
+.infoBox:hover .infoBox__total,
+.infoBox:hover .infoBox__cases{
   color: #fff !important;
 }
 
@@ -32,8 +35,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  /* color: #61dafb !important; */
-  color: var(--charlestonGreen)!important;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  /* color: var(--charlestonGreen)!important; */
+  /* color: #fff!important; */
 }
 
 .MuiCardContent-root h2 {
@@ -43,7 +48,6 @@
 .infoBox__total,
 .infoBox__title {
   font-size: 0.75rem !important;
-  /* text-shadow: 0 0 10px -5px rgba(0, 0, 0, 1) !important; */
   font-weight: 400 !important;
 }
 

@@ -1,7 +1,17 @@
+
+.stats{
+    background: url('../../images/bg.jpg');
+    padding: 020px;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 0 7px -4px #bbb;
+
+}
 .app__left__stats_wrapper{
-    /* border: 5px solid blue; */
-    /* padding: 10px; */
-    /* margin: 5px; */
     display: flex;
     justify-content: center;
+    /* border: 1px solid red; */
 }
