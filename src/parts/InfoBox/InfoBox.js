@@ -9,9 +9,9 @@ import {
 
 function InfoBox({
   active,
-  isBlue,
-  isRed,
-  isGreen,
+  isblue,
+  isred,
+  isgreen,
   title,
   cases,
   total,
@@ -19,16 +19,18 @@ function InfoBox({
 }) {
   return (
     <Card
-      isRed={isRed}
-      isGreen={isGreen}
+      isred={isred}
+      isgreen={isgreen}
       onClick={props.onClick}
-      className={` ${styles.infoBox} 
-                   ${
-                     active &&
-                     ((isBlue && styles.border__blue) ||
-                       (isGreen && styles.border__green) ||
-                       (isRed && styles.border__red))
-                   }`}
+      className={styles.infoBox} 
+                   
+      // className={` ${styles.infoBox} 
+      //              ${
+      //                active &&
+      //                ((isBlue && styles.border__blue) ||
+      //                  (isGreen && styles.border__green) ||
+      //                  (isRed && styles.border__red))
+      //              }`}
     >
       <CardActionArea>
         <CardContent className={styles.infoBox__content}>
@@ -39,9 +41,9 @@ function InfoBox({
           {/* Number cases numeral(country.cases).format(0.0)*/} 
           <h2
             className={`${
-              (isBlue && styles.blue) ||
-              (isGreen && styles.green) || 
-              (isRed && styles.red)
+              (isblue && styles.blue) ||
+              (isgreen && styles.green) || 
+              (isred && styles.red)
             }`}
           >
             {cases}

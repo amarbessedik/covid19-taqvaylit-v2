@@ -6,19 +6,27 @@ import SidebarMenu from "./parts/Navbar/SidebarMenu";
 import About from "./parts/About/About";
 import MultiLangDictionary from "./parts/MultiLangDictionary/MultiLangDictionary";
 import Footer from "./parts/Footer/Footer";
-import { sortData, prettyPrintStat } from "./utils";
+import { sortData } from "./utils";
 import Map from "./parts/Map/Map";
 import Stats from "./parts/Stats/Stats";
 import Table from "./parts/Table/Table";
 import "leaflet/dist/leaflet.css";
 import TextSlider from "./parts/TextSlider/TextSlider";
 import Graph from "./parts/Graph/Graph";
-import Country from "./parts/Country/Country";
-import algeria from "../src/images/algeria.jpg";
-import morocco from "../src/images/morocco.jpg";
-import tunisia from "../src/images/tunisia.jpg";
-import libya from "../src/images/libya.jpg";
-import mauritania from "../src/images/mauritania.jpg";
+import Continent from "./parts/Continent/Continent";
+import {
+  FormControl,
+  MenuItem,
+  Select,
+  Card,
+  CardContent,
+} from "@material-ui/core";
+import northAmerica from "../src/images/north-america.jpg";
+import southAmerica from "../src/images/south-america.jpg";
+import africa from "../src/images/africa.jpg";
+import europe from "../src/images/europe.jpg";
+import asia from "../src/images/asia.jpg";
+import australia from "../src/images/australia.jpg";
 
 const Tapp = () => {
   const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -43,6 +51,8 @@ const Tapp = () => {
   const [mapCountries, setMapCountries] = useState([]);
   //cases types -> {cases, recovered, deaths}
   const [casesType, setCasesType] = useState("cases");
+  //continent data
+  const [continents, setContinents] = useState([]);
 
   const handleToggleLinks = () => {
     window.innerWidth <= 768 ? setToggleLinks(true) : setToggleLinks(false);
@@ -147,50 +157,64 @@ const Tapp = () => {
       });
   };
 
-  const countrySubset = [
-    "Algeria",
-    "Morocco",
-    "Tunisia",
-    "Libyan Arab Jamahiriya",
-    "Mauritania",
+  useEffect(() => {
+    const getContinents = async () => {
+      await fetch("https://disease.sh/v3/covid-19/continents")
+        .then((response) => response.json())
+        .then((data) => {
+          const continents = data.map(({continent, cases, recovered, deaths}) => ({
+            continent,
+            cases,
+            recovered,
+            deaths,
+
+          }));
+          setContinents(continents);
+        });
+    };
+    getContinents();
+  }, []);
+
+  // continents.length? console.log('continents >>> ', continents): console.log();
+
+  const filterContinent = (name)=>{
+    return continents?.filter(entry => entry.continent === name);
+  }
+
+  const continentsData = [
+    {
+      name: "Marikan Ufella",
+      data: filterContinent("North America")[0],
+      image: northAmerica,
+    },
+    {
+      name: "Marikan N Wadda",
+      data: filterContinent("South America")[0],
+      image: southAmerica,
+    },
+    {
+      name: "Lurup",
+      data: filterContinent("Europe")[0],
+      image: europe,
+    },
+    {
+      name: "Tafarka",
+      data: filterContinent("Africa")[0],
+      image: africa,
+    },
+    {
+      name: "Asiya",
+      data: filterContinent("Asia")[0],
+      image: asia,
+    },
+    {
+      name: "Lustrali",
+      data: filterContinent("Australia/Oceania")[0],
+      image: australia,
+    },
   ];
 
-  const countrySubsetData = tableData.filter((entry) =>
-    countrySubset.includes(entry.country)
-  );
-
-   const filterCountries = (country, data) => {
-     return { ...data.filter((entry) => entry.country === country)[0] };
-   };
-
-
-  const preparedCountrySubset = [
-    {
-      name: "Lazzayer",
-      data: filterCountries("Algeria", countrySubsetData),
-      image: algeria
-    },
-    {
-      name: "Lmarruk",
-      data: filterCountries("Morocco", countrySubsetData),
-      image: morocco
-    },
-    {
-      name: "Tunes",
-      data: filterCountries("Tunisia", countrySubsetData),
-      image: tunisia
-    },
-    {
-      name: "Libya",
-      data: filterCountries("Libyan Arab Jamahiriya", countrySubsetData),
-      image: libya
-    },
-    {
-      name: "Muritania",
-      data: filterCountries("Mauritania", countrySubsetData),
-      image: mauritania
-    },
-  ];
+  // console.log("continents data >>> ", continentsData);
 
   return (
     <div className="app">
@@ -223,7 +247,28 @@ const Tapp = () => {
           className="dropdown"
           style={dropdown__bottom}
         >
-          <h1>dropdown</h1>
+          {/* <h1>dropdown</h1> */}
+          <FormControl className="form__dropdown">
+            <Select
+              variant="outlined"
+              value={country}
+              onChange={onCountryChange}
+            >
+              <MenuItem key="0" value="worldwide">
+                <span>Worldwide</span>
+              </MenuItem>
+              {
+                /* loop through all countries and display each as an option */
+                countries.map((country) => {
+                  return (
+                    <MenuItem key={country.id} value={country.value}>
+                      {country.name}
+                    </MenuItem>
+                  );
+                })
+              }
+            </Select>
+          </FormControl>
         </div>
         <TextSlider />
         <div className="app__stats__content">
@@ -235,9 +280,6 @@ const Tapp = () => {
                 countryInfo={countryInfo}
               />
             </div>
-            <div className="app__left__table">
-              <Table casesType={casesType} countries={tableData} />
-            </div>
             <div className="app__left__graph">
               <Graph
                 adapteCasesType={adapteCasesType}
@@ -247,20 +289,15 @@ const Tapp = () => {
                 country={country}
               />
             </div>
+            <div className="app__left__table">
+              <Table casesType={casesType} countries={tableData} />
+            </div>
           </div>
           <div className="app__right">
             {/* <h1>app right</h1> */}
-            {preparedCountrySubset.map(({name, image, data},
-                i
-              ) => (
-                <Country
-                  key={i}
-                  image={image}
-                  name={name}
-                  data={data}
-                />
-              )
-            )}
+            {continentsData.map(({ name, image, data }, i) => (
+              <Continent key={i} name={name} image={image} data={data} />
+            ))}
           </div>
         </div>
       </div>

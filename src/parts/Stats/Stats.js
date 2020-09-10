@@ -8,7 +8,7 @@ const Stats = ({ casesType, setCasesType, countryInfo }) => {
     <div className={styles.app__left__stats_wrapper}>
       <InfoBox
         active={casesType === "cases"}
-        isBlue={true}
+        isblue={true}
         onClick={(e) => setCasesType("cases")}
         title="WID YUḌNEN"
         cases={prettyPrintStat(countryInfo.todayCases)}
@@ -16,7 +16,7 @@ const Stats = ({ casesType, setCasesType, countryInfo }) => {
       />
       <InfoBox
         active={casesType === "recovered"}
-        isGreen={true}
+        isgreen={true}
         onClick={(e) => setCasesType("recovered")}
         title="WID YEJJAN"
         cases={prettyPrintStat(countryInfo.todayRecovered)}
@@ -24,7 +24,7 @@ const Stats = ({ casesType, setCasesType, countryInfo }) => {
       />
       <InfoBox
         active={casesType === "deaths"}
-        isRed={true}
+        isred={true}
         onClick={(e) => setCasesType("deaths")}
         title="WID YEMUTEN"
         cases={prettyPrintStat(countryInfo.todayDeaths)}

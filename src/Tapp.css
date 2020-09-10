@@ -92,6 +92,13 @@ code {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.chartjs-render-monitor{
+  height: 480px !important;
+  /* width: 798px !important; */
+  object-fit: contain !important;
+}
+
 .app__right {
   /* margin: 3px auto; */
   margin: 0 auto;

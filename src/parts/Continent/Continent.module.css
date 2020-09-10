@@ -1,0 +1,53 @@
+.continent{
+    box-shadow: 0 0 7px -5px #333;
+    background: #fff;
+    border-radius: 4px;
+    /* padding: 5px 0; */
+    /* margin: 5px 0; */
+}
+.continent:not(:last-child){
+margin: 5px 0;
+}
+
+.continent__title{
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #777;
+}
+.continent__image{
+    display: flex;
+    justify-content: center;
+}
+.continent__image img{
+    width: 200px;
+    object-fit: contain;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.continent__stats{
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+.continent__numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+.continent__numbers{
+    font-size: 10px;
+    color: #777;
+}
+.continent__numbers:nth-child(even){ 
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+.number{
+    font-size: 12px;
+}

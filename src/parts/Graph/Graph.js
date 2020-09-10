@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import LineGraph from './LineGraph';
 import LineGraphButtons from './LineGraphButtons';
+import TrendingUpIcon from "@material-ui/icons/TrendingUp";
 
 const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country }) => {
   return (
@@ -16,17 +17,19 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
       <Card>
         <CardContent>
           {/* graph */}
-          <h3 style={{ textTransform: "uppercase" }} className="app__graph">
-            {adapteCasesType(casesType)} DEG AMAḌAL AKIT
+          <h3 style={{ textTransform: "uppercase", color: '#777' }} className="app__graph">
+            {adapteCasesType(casesType)} DEG MAḌAL AKIT
           </h3>
           <span
             style={{
-              display: "block",
-              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               textTransform: "capitalize",
+              color : '#777'
             }}
           >
-            (Asmerni N Uṭṭunen D Asawen)
+             [ Uṭṭunen <TrendingUpIcon /> ]
           </span>
           <LineGraphButtons
             countryInfo={countryInfo}

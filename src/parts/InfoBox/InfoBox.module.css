@@ -1,10 +1,10 @@
 .infoBox {
   box-sizing: border-box !important;
-  border-radius: 5px;
-  border: 3px solid transparent;
+  /* border-radius: 5px; */
+  /* border: 3px solid transparent; */
   width: 33.33%;
-  box-shadow: 0 0 12px -4px #777!important;
-  height: 130px;
+  box-shadow: 0 0 7px -4px #999!important;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +22,9 @@
 
 .infoBox:nth-child(even){
   margin: 0 3px;
+}
+.MuiPaper-rounded{
+  border-top-left-radius: none!important;
 }
 .infoBox__title,
 .infoBox__cases,

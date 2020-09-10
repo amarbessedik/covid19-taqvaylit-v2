@@ -1,23 +1,26 @@
 import React from "react";
 import styles from "./Table.module.css";
 import numeral from "numeral";
+import TrendingDownIcon from "@material-ui/icons/TrendingDown";
 
 function Table({ countries }) {
   // console.log('countries from TABLE >>>>', countries);
   return (
     <div id="table" className={styles.table__outer__container}>
       <div id="_table" className="app__table__header">
-        <h3 style={{ textTransform: "uppercase" }}>
+        <h3 style={{ textTransform: "uppercase", color: '#777' }}>
           UṬṬUNEN SRID SI YELL TAMURT
         </h3>
         <span
           style={{
-            display: "block",
-            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             textTransform: "capitalize",
+            color: "#888",
           }}
         >
-          (Asmerni N Uṭṭunen D Akewssar)
+          [ Uṭṭunen <TrendingDownIcon /> ]
         </span>
       </div>
       <div className={styles.table__inner__container}>
