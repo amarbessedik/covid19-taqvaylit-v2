@@ -28,13 +28,13 @@ function MultiLangDictionary() {
   };
 
   const btn__active__style = {
-    background: "var(--middleRed)",
-    color: "var(--lavenderWeb)",
+    color: "var(--charcoal)",
+    background: "transparent",
     
   };
 
   const btn__inactive__style = {
-    background: "var(--charlestonGreen)",
+    background: "var(--charcoal)",
     color: "var(--lavenderWeb)",
   };
 

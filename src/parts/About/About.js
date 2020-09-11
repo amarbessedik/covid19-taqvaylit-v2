@@ -5,7 +5,7 @@ import LinkIcon from "@material-ui/icons/Link";
 const About = () => {
   return (
     <div id="about" className={styles.app__about}>
-      <h1>
+      <h2>
         Isfkaya-agi Ḥawcaɣ-ten-id deg{" "}
         <a
           className={styles.about__link}
@@ -14,8 +14,8 @@ const About = () => {
           rel="noopener noreferrer"
         >
           Open Disease Data <LinkIcon className={styles.link__icon} />
-        </a>
-      </h1>
+        </a> 
+      </h2>
       <p>
         Ayen i d-yettbanen deg wuṭṭunen yezmer yenqes, imi, mazal ayen ara
         d-ibanen akka ar deqqal, annect-agi, ɣef teɣzi n 24 n tsaεtin. Ma d

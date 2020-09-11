@@ -2,12 +2,18 @@
     box-shadow: 0 0 7px -5px #333;
     background: #fff;
     border-radius: 4px;
+    cursor: pointer;
 }
+
 .continent:not(:last-child){
 margin: 5px 0;
 }
 .continent:last-child{
 margin-bottom: 5px;
+}
+
+.continent:hover{
+    box-shadow: 0 0 10px -5px #333;
 }
 
 .continent__title{
@@ -53,4 +59,45 @@ margin-bottom: 5px;
 
 .number{
     font-size: 12px;
+}
+
+/* Overlay style */
+.continent__overlay{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,.3);
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.continent__overlay__data{
+    width: 50%;
+    height: 50%;
+    border: 2px solid red;
+    background: #333;
+    color: #fff;
+}
+.overlay__close__icon__wraper{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.close__icon{
+    font-size: 2.5rem !important;
+    cursor: pointer;
+}
+
+.close__icon:hover{
+    background: #555;
+    border-radius: 50%;
+    padding: 5px;
 }

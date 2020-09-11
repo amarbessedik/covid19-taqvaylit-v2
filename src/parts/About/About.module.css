@@ -1,6 +1,6 @@
-.app__about h1{
+.app__about h2{
   margin-bottom: 40px;
-  color: var(--lavenderWeb);
+  color: #777;
 }
 
 .app__about a{
@@ -8,7 +8,7 @@
     color: var(--middleRed);
 }
 .app__about a:hover{
-    color: #fff;
+    text-decoration: underline;
 }
 .app__about ol{
     margin: 15px 30px;
@@ -41,7 +41,7 @@
     align-items: flex-end;
     animation: rotation 5s infinite linear;
     /* color: var(--bcolor); */
-    box-shadow: 0 0 12px -4px #ddd;
+    box-shadow: 0 0 12px -4px #999;
 }
 
 @media screen and (max-width: 768px){

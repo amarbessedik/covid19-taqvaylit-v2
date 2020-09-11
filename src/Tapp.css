@@ -4,8 +4,6 @@
   --darkJungleGreen: #0d1b1e;
   --charlestonGreen: #17272C;
   --charcoal: #354B54;
-  /* --middleRed: #faa795; */
-  /* --middleRed: #E40066; */
   --middleRed: #FB4D3D;
   --cultured: #f5f5f5;
   --lightGray: #cfd0d6;
@@ -126,14 +124,13 @@ html {
 }
 .multi__lang__dictionary{
   color: var(--lavenderWeb);
-  background: linear-gradient(to top,  var(--charlestonGreen), var(--charcoal));
+  /* background: linear-gradient(to top,  var(--charlestonGreen), var(--charcoal)); */
   font-weight: 400;
 }
 .about,
-.footer, .multi__lang__dictionary {
+.footer,.multi__lang__dictionary {
   padding: 5vh 10vw;
-  background: var(--charcoal);
-  color: var(--lavenderWeb);
+  color: #444;
 }
 .footer {
   background: var(--darkJungleGreen);
