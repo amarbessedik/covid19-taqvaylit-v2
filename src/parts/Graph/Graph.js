@@ -13,7 +13,6 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
     <div className={styles.graph}>
       <Card>
         <CardContent>
-          {/* graph */}
           <h3
             style={{
               textTransform: "uppercase",
@@ -45,8 +44,6 @@ const Graph = ({ adapteCasesType, casesType, setCasesType, countryInfo, country 
           ) : (
             <LineGraph casesType={casesType} location={country} />
           )}
-          {/* country table */}
-          {/* <div id="table" style={{ height: "80px" }}></div> */}
         </CardContent>
       </Card>
     </div>

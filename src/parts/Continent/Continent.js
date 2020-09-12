@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Continent.module.css';
 import { prettyPrintStat } from "../../utils";
 import CloseIcon from "@material-ui/icons/Close";
+// import BarPlot from '../Graph/BarPlot';
+import StackedAreaChart from '../Graph/StackedAreaChart';
 
 const Continent = ({ name, image, data }) => {
   let overlay = document.getElementById("overlay");
@@ -37,10 +39,14 @@ const Continent = ({ name, image, data }) => {
       </div>
       <div id="overlay" className={styles.continent__overlay}>
         <div className={styles.continent__overlay__data}>
-          <div onClick={closeOverlay} className={styles.overlay__close__icon__wraper}>
+          <div
+            onClick={closeOverlay}
+            className={styles.overlay__close__icon__wraper}
+          >
             <CloseIcon className={styles.close__icon} />
           </div>
-          <h1>overlay data</h1>
+          {/* <BarPlot /> */}
+          <StackedAreaChart />
         </div>
       </div>
     </div>

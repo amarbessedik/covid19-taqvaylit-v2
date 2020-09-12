@@ -28,6 +28,52 @@ export const buildChartData = (data, casesType = "cases") => {
   return chartData;
 };
 
+export const buildChartData2 = (data, casesType) => {
+  const chartData = [];
+  let lastDataPoint;
+  if (data) {
+    for (let date in data[casesType]) {
+      if (lastDataPoint) {
+        let newDataPoint;
+
+        //--------------
+         switch (casesType) {
+           case "cases":
+             newDataPoint = {
+               date: date,
+               cases: data[casesType][date] - lastDataPoint,
+             };
+             break;
+           case "recovered":
+             newDataPoint = {
+               date: date,
+               recovered: data[casesType][date] - lastDataPoint,
+             };
+             break;
+           case "deaths":
+             newDataPoint = {
+               date: date,
+               deaths: data[casesType][date] - lastDataPoint,
+             };
+             break;
+
+             default: 
+             newDataPoint = {
+               x: date,
+               y: data[casesType][date] - lastDataPoint,
+             }; break;
+         }
+
+        //------------
+
+        chartData.push(newDataPoint);
+      }
+      lastDataPoint = data[casesType][date];
+    }
+  }
+  return chartData;
+};
+
 //color dictionary (OBJECT)
 export const casesTypeColors = {
          cases: {

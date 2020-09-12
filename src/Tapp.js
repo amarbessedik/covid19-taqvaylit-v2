@@ -25,6 +25,8 @@ import africa from "../src/images/africa.jpg";
 import europe from "../src/images/europe.jpg";
 import asia from "../src/images/asia.jpg";
 import australia from "../src/images/australia.jpg";
+// import BarPlot from "./parts/Graph/BarPlot";
+
 
 const Tapp = () => {
   const [dropdownToggle, setDropdownToggle] = useState(false);
