@@ -66,7 +66,7 @@
   height: 100vh;
   width: 100vw;
   background: rgba(0, 0, 0, 0.3);
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,8 +79,8 @@
   z-index: 33;
 }
 .continent__overlay__data {
-  width: fit-content;
-  height: 65%;
+  width: 60vw;
+  height: 65vh;
   box-shadow: 0 0 15px -4px #333;
   border-radius: 5px;
   background: var(--cultured);
@@ -89,33 +89,46 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
   padding: 10px;
   margin: 10px;
+  position: relative;
 }
 .overlay__close__icon__wraper {
   display: flex;
   flex: 1;
   justify-content: flex-end;
   padding: 10px;
+  position: fixed;
+  top: 60px;
 }
 
 .close__icon {
-  font-size: 2.3rem !important;
-  color: red !important;
+  font-size: 2.2rem !important;
+  color:#444 !important;
   background: #fff;
-  box-shadow: 0 0 10px -5px #000;
+  box-shadow: 0 0 12px -5px #000;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .close__icon:hover {
-  padding: 3px;
-  
+  padding: 3px;  
 }
 
-/* @media screen and (max-width: 768px){
-  .continent__overlay__data{
-    
+.continent__charts{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+  position: absolute;
+  top: 75px;
+}
+
+
+@media screen and (max-width: 768px){
+  .continent__overlay__data {
+    width: 95%;
   }
-} */
+}

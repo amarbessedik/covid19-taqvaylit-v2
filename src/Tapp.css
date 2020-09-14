@@ -68,10 +68,8 @@ html {
 }
 .app__stats__content,
 .dropdown {
-  /* margin: 5px auto; */
   margin: 0 auto;
   width: 80vw;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
 }
@@ -80,13 +78,10 @@ html {
 }
 .app__left { 
   width: 70vw;
-  /* border: 1px solid red; */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: stretch; */
-  /* align-items: start; */
 }
 
 .chartjs-render-monitor{
@@ -107,6 +102,7 @@ html {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .app__left__stats,

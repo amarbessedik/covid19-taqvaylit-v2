@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { buildChartData, options, casesTypeColors } from "../../utils";
-// import styles from "./LineGraph.module.css";
-//buildChartDatasets
 
 function LineGraph({ 
   height = 320,
@@ -25,8 +23,7 @@ function LineGraph({
             ? buildChartData(data_json.timeline, casesType)
             : buildChartData(data_json, casesType);
           setData(chartData);
-          console.log('LineGraph >>> chartData:', chartData);
-          // console.log('LineGraph >>> data: ', data);
+          // console.log('LineGraph >>> chartData:', chartData);
         });
     };
     fetchData();

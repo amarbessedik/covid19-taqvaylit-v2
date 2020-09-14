@@ -13,20 +13,19 @@ import Table from "./parts/Table/Table";
 import "leaflet/dist/leaflet.css";
 import TextSlider from "./parts/TextSlider/TextSlider";
 import Graph from "./parts/Graph/Graph";
-import Continent from "./parts/Continent/Continent";
-import {
-  FormControl,
-  MenuItem,
-  Select,
-} from "@material-ui/core";
-import northAmerica from "../src/images/north-america.jpg";
-import southAmerica from "../src/images/south-america.jpg";
-import africa from "../src/images/africa.jpg";
-import europe from "../src/images/europe.jpg";
-import asia from "../src/images/asia.jpg";
-import australia from "../src/images/australia.jpg";
-// import BarPlot from "./parts/Graph/BarPlot";
-
+import { FormControl, MenuItem, Select } from "@material-ui/core";
+import Africa from "./parts/Continents/Africa";
+import Asia from "./parts/Continents/Asia";
+import Europe from "./parts/Continents/Europe";
+import Australia from "./parts/Continents/Australia";
+import NorthAmerica from "./parts/Continents/NorthAmerica";
+import SouthAmerica from "./parts/Continents/SouthAmerica";
+// import northAmerica from "../src/images/north-america.jpg";
+// import southAmerica from "../src/images/south-america.jpg";
+// import africa from "../src/images/africa.jpg";
+// import europe from "../src/images/europe.jpg";
+// import asia from "../src/images/asia.jpg";
+// import australia from "../src/images/australia.jpg";
 
 const Tapp = () => {
   const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -51,8 +50,7 @@ const Tapp = () => {
   const [mapCountries, setMapCountries] = useState([]);
   //cases types -> {cases, recovered, deaths}
   const [casesType, setCasesType] = useState("cases");
-  //continent data
-  const [continents, setContinents] = useState([]);
+  
 
   const handleToggleLinks = () => {
     window.innerWidth <= 768 ? setToggleLinks(true) : setToggleLinks(false);
@@ -157,64 +155,6 @@ const Tapp = () => {
       });
   };
 
-  useEffect(() => {
-    const getContinents = async () => {
-      await fetch("https://disease.sh/v3/covid-19/continents")
-        .then((response) => response.json())
-        .then((data) => {
-          const continents = data.map(({continent, cases, recovered, deaths}) => ({
-            continent,
-            cases,
-            recovered,
-            deaths,
-
-          }));
-          setContinents(continents);
-        });
-    };
-    getContinents();
-  }, []);
-
-
-  const filterContinent = (name)=>{
-    return continents?.filter(entry => entry.continent === name);
-  }
-
-  const continentsData = [
-    {
-      name: "Marikan Ufella",
-      data: filterContinent("North America")[0],
-      image: northAmerica,
-    },
-    {
-      name: "Marikan B Wadda",
-      data: filterContinent("South America")[0],
-      image: southAmerica,
-    },
-    {
-      name: "Lurup",
-      data: filterContinent("Europe")[0],
-      image: europe,
-    },
-    {
-      name: "Taferka",
-      data: filterContinent("Africa")[0],
-      image: africa,
-    },
-    {
-      name: "Lazi",
-      data: filterContinent("Asia")[0],
-      image: asia,
-    },
-    {
-      name: "Lustrali",
-      data: filterContinent("Australia/Oceania")[0],
-      image: australia,
-    },
-  ];
-
-  // console.log("continents data >>> ", continentsData);
-
   return (
     <div className="app">
       {!screenBreakpoint && (
@@ -293,10 +233,60 @@ const Tapp = () => {
             </div>
           </div>
           <div className="app__right">
-            {/* <h1>app right</h1> */}
-            {continentsData.map(({ name, image, data }, i) => (
-              <Continent key={i} name={name} image={image} data={data} />
-            ))}
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <Africa />
+            </div>
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <Asia />
+            </div>
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <Europe />
+            </div>
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <Australia />
+            </div>
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <NorthAmerica />
+            </div>
+            <div
+              style={{
+                boxShadow: "0 0 8px -4px #333",
+                background: "#fff",
+                padding: "10px",
+              }}
+            >
+              <SouthAmerica />
+            </div>
           </div>
         </div>
       </div>
