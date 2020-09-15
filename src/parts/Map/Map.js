@@ -6,7 +6,7 @@ import { showDataOnMap } from '../../utils';
 function Map({ countries, center, zoom, casesType}) {
     // console.log("countries MAP >>>", countries);
     return (
-      // <div className="map">
+      // <div className="map__wrapper">
         <LeafletMap center={center} zoom={zoom}>
           <TileLayer
             fillColor="red"
@@ -15,7 +15,7 @@ function Map({ countries, center, zoom, casesType}) {
           />
           {/* Loop through countries and draw circles on the screen */}
           {showDataOnMap(countries, casesType)}
-        </LeafletMap>
+        </LeafletMap> 
       // </div>
     ); 
 }

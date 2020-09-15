@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Tapp.css";
-import ScrollTop from "./components/ScrollTop";
+import ScrollTop from "./parts/ScrollTop/ScrollTop";
 import Navbar from "./parts/Navbar/Navbar";
-import SidebarMenu from "./parts/Navbar/SidebarMenu";
 import About from "./parts/About/About";
 import MultiLangDictionary from "./parts/MultiLangDictionary/MultiLangDictionary";
 import Footer from "./parts/Footer/Footer";
@@ -14,18 +13,13 @@ import "leaflet/dist/leaflet.css";
 import TextSlider from "./parts/TextSlider/TextSlider";
 import Graph from "./parts/Graph/Graph";
 import { FormControl, MenuItem, Select } from "@material-ui/core";
-import Africa from "./parts/Continents/Africa";
-import Asia from "./parts/Continents/Asia";
-import Europe from "./parts/Continents/Europe";
-import Australia from "./parts/Continents/Australia";
-import NorthAmerica from "./parts/Continents/NorthAmerica";
-import SouthAmerica from "./parts/Continents/SouthAmerica";
-// import northAmerica from "../src/images/north-america.jpg";
-// import southAmerica from "../src/images/south-america.jpg";
-// import africa from "../src/images/africa.jpg";
-// import europe from "../src/images/europe.jpg";
-// import asia from "../src/images/asia.jpg";
-// import australia from "../src/images/australia.jpg";
+import Continent from "./parts/Continents/Continent";
+import northAmericaImage from "../src/images/north-america.jpg";
+import southAmericaImage from "../src/images/south-america.jpg";
+import africaImage from "../src/images/africa.jpg";
+import europeImage from "../src/images/europe.jpg";
+import asiaImage from "../src/images/asia.jpg";
+import australiaImage from "../src/images/australia.jpg";
 
 const Tapp = () => {
   const [dropdownToggle, setDropdownToggle] = useState(false);
@@ -64,6 +58,10 @@ const Tapp = () => {
 
   const updateSidebarVisibility = () => {
     setSidebarVisible(!sidebarVisible);
+  };
+
+  const resetSidebarVisibility = () => {
+    setSidebarVisible(false);
   };
 
   useEffect(() => {
@@ -157,15 +155,9 @@ const Tapp = () => {
 
   return (
     <div className="app">
-      {!screenBreakpoint && (
-        <SidebarMenu
-          sidebarVisible={sidebarVisible}
-          dropdownTopVisible={dropdownToggle}
-          updateSidebarVisibility={updateSidebarVisibility}
-        />
-      )}
-
       <Navbar
+       resetSidebarVisibility = {resetSidebarVisibility}
+       sidebarVisible={sidebarVisible}
         updateSidebarVisibility={updateSidebarVisibility}
         screenBreakpoint={screenBreakpoint}
         toggleLinks={toggleLinks}
@@ -173,7 +165,7 @@ const Tapp = () => {
       />
 
       <div className="app__stats">
-        <div className="map">
+        <div id="map" className="map">
           <Map
             countries={mapCountries}
             center={mapCenter}
@@ -219,7 +211,7 @@ const Tapp = () => {
                 countryInfo={countryInfo}
               />
             </div>
-            <div className="app__left__graph">
+            <div id="graph" className="app__left__graph">
               <Graph
                 adapteCasesType={adapteCasesType}
                 casesType={casesType}
@@ -228,73 +220,49 @@ const Tapp = () => {
                 country={country}
               />
             </div>
-            <div className="app__left__table">
+            <div id="table" className="app__left__table">
               <Table casesType={casesType} countries={tableData} />
             </div>
           </div>
           <div className="app__right">
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <Africa />
-            </div>
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <Asia />
-            </div>
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <Europe />
-            </div>
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <Australia />
-            </div>
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <NorthAmerica />
-            </div>
-            <div
-              style={{
-                boxShadow: "0 0 8px -4px #333",
-                background: "#fff",
-                padding: "10px",
-              }}
-            >
-              <SouthAmerica />
-            </div>
+            <Continent
+              continent="Africa"
+              title="aCuW-2 DI TFERKA"
+              imageUrl={africaImage}
+            />
+            <Continent
+              continent="north%20america"
+              title="aCuW-2 DI MARIKAN UFELLA"
+              imageUrl={northAmericaImage}
+            />
+            <Continent
+              continent="Europe"
+              title="aCuW-2 DI URRUPA"
+              imageUrl={europeImage}
+            />
+            <Continent
+              continent="Asia"
+              title="aCuW-2 DI ASIYA"
+              imageUrl={asiaImage}
+            />
+            <Continent
+              continent="south%20america"
+              title="aCuW-2 DI MARIKAN N WADDA"
+              imageUrl={southAmericaImage}
+            />
+            <Continent
+              continent="australia%2Foceania"
+              title="aCuW-2 DI USTRALIA/OCEANIA"
+              imageUrl={australiaImage}
+            />
           </div>
         </div>
       </div>
-      <div className="app__bottom">
+      <div id="dictionary" className="app__bottom">
         <div className="multi__lang__dictionary">
           <MultiLangDictionary />
         </div>
-        <div className="about">
+        <div id="about" className="about">
           <About />
         </div>
         <div className="footer">

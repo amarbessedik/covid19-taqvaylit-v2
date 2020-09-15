@@ -6,14 +6,15 @@ export default {
     fontSize: "10px",
   },
   dataLabels: {
-    enabled: true,
+    enabled: false,
   },
   title: {
     text: "",
-    align: "left",
+    align: "center",
     style: {
-      fontSize: "10px",
-      color: "#bbb",
+      fontSize: "12px",
+      fontWeight: '400',
+      color: "#999",
       textTransform: "uppercase",
     },
   },

@@ -19,11 +19,19 @@ const Links = ({ dflex, links }) => {
       <MoreIcon className={styles.navLink__icon}/>,
     ];
 
+    const cleanUrl = () => {
+      window.history.pushState("object or string", "Page Title", "/");
+    };
+
     return (
       <div className={styles.links}>
         <ul style={d_flex}>
           {links.map((link, i) => (
-            <li className={dflex === 'column' ? `${styles.list__item}` : null} key={i}>
+            <li
+              onMouseLeave={cleanUrl}
+              className={dflex === "column" ? `${styles.list__item}` : null}
+              key={i}
+            >
               {navLinkIcons[i]} <a href={link.id}>{link.name}</a>
             </li>
           ))}

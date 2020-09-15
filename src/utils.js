@@ -76,25 +76,25 @@ export const buildChartData2 = (data, casesType) => {
 
 //color dictionary (OBJECT)
 export const casesTypeColors = {
-         cases: {
-           hex: "#062BD1",
-           border: "#CC1034",
-           fill: "rgba(3, 22, 197, 0.5)",
-           multiplier: 800,
-         },
-         recovered: {
-           hex: "rgb(61, 235, 191)",
-           border: "#7DD71D",
-           fill: "rgba(61, 235, 191, 0.5)",
-           multiplier: 800,
-         },
-         deaths: {
-           hex: "#FB4443",
-           border: "#FB4443",
-           fill: "rgba(251, 65, 65, 0.5)",
-           multiplier: 1200,
-         },
-       };
+  cases: {
+    hex: "#062BD1",
+    border: "rgba(0, 143, 251, 0.85)",
+    fill: "rgba(0, 143, 251, 0.5)",
+    multiplier: 800,
+  },
+  recovered: {
+    hex: "rgb(61, 235, 191)",
+    border: "#7DD71D",
+    fill: "rgba(61, 235, 191, 0.5)",
+    multiplier: 800,
+  },
+  deaths: {
+    hex: "#FB4443",
+    border: "#FB4443",
+    fill: "rgba(251, 65, 65, 0.5)",
+    multiplier: 1200,
+  },
+};
 
 //Graph display options
 export const options = {

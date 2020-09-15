@@ -12,7 +12,7 @@ export default [
     id: "#graph",
   },
   {
-    name: "AMAWAL",
+    name: "ASEGZAWAL",
     id: "#dictionary",
   },
   {

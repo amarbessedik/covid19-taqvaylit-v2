@@ -28,13 +28,12 @@ function MultiLangDictionary() {
   };
 
   const btn__active__style = {
-    color: "var(--charcoal)",
+    color: "rgba(0, 143, 251, 0.85)",
     background: "transparent",
-    
   };
 
   const btn__inactive__style = {
-    background: "var(--charcoal)",
+    background: "rgba(0, 143, 251, 0.85)",
     color: "var(--lavenderWeb)",
   };
 
@@ -42,9 +41,10 @@ function MultiLangDictionary() {
     <div className={styles.multiLang__container}>
       <h2 style={{ color: "var(--middleRed)", marginBottom: "25px" }}>
         {" "}
-        AMAWAL - {english? 'DICTIONARY':null} { french?'DICTIONAIRE':null} {arabic?' قاموس':null} :{" "}
+        ASEGZAWAL - {english ? "DICTIONARY" : null}{" "}
+        {french ? "DICTIONAIRE" : null} {arabic ? " قاموس" : null} :{" "}
       </h2>
-      <ButtonGroup  
+      <ButtonGroup
         className={styles.language__chooser}
         variant="contained"
         // color=""
@@ -54,32 +54,25 @@ function MultiLangDictionary() {
           onClick={handleKabyleEnglish}
           className={`${styles.btn} ${styles.btn__english}`}
           variant={english ? "outlined" : "contained"}
-          style={
-            english
-              ? btn__active__style : btn__inactive__style
-          }
+          style={english ? btn__active__style : btn__inactive__style}
         >
-          TAMAZIƔT ar Taglizzit <br />
+          TAMAZIƔT ar Teglizit <br />
           (English)
         </Button>
         <Button
           onClick={handleKabyleFrench}
           className={styles.btn}
           variant={french ? "outlined" : "contained"}
-          style={
-            french ? btn__active__style : btn__inactive__style
-          }
+          style={french ? btn__active__style : btn__inactive__style}
         >
-          TAMAZIƔT ar Tafransist <br />
+          TAMAZIƔT ar Tefransist <br />
           (Français)
         </Button>
         <Button
           onClick={handleKabyleArabic}
           className={`${styles.btn} ${styles.btn__arabic}`}
           variant={arabic ? "outlined" : "contained"}
-          style={
-            arabic ? btn__active__style : btn__inactive__style
-          }
+          style={arabic ? btn__active__style : btn__inactive__style}
         >
           TAMAZIƔT ar Taɛrabt <br />
           (العربية)

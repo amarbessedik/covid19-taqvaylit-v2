@@ -1,6 +1,7 @@
 
 .stats{
     background: url('../../images/bg.jpg');
+    background-repeat: no-repeat;
     padding: 020px;
     height: 100%;
     object-fit: contain;

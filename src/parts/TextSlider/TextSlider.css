@@ -31,6 +31,9 @@
   width:95vw;
   font-size: .85rem;
 }
+.main p{
+  font-size: 0.75rem;
+}
 }
 
 @-webkit-keyframes slide-right { from { margin-left: 100%;width: 300%; }

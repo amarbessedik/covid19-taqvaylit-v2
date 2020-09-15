@@ -3,10 +3,11 @@ import styles from "./Navbar.module.css";
 import logo from "../../images/logo.png";
 import links from "../../data";
 import Links from "./Links";
+import SidebarMenu from "../../parts/Navbar/SidebarMenu";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdownToggle }) => {
+const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdownToggle, sidebarVisible, resetSidebarVisibility }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [pageYOffset, setPageYOffset] = useState(false);
 
@@ -32,6 +33,10 @@ const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdow
   window.addEventListener('scroll', ()=>{
     window.pageYOffset < 600 ? setPageYOffset(false) : setPageYOffset(true);
   })
+
+  const resetOpenSidemenu = ()=>{
+    setMenuOpen(false);
+  }
 
   return (
     <div
@@ -64,6 +69,14 @@ const Navbar = ({ updateSidebarVisibility,toggleLinks, screenBreakpoint, dropdow
             </div>
           </div>
         </div>
+        {!screenBreakpoint && (
+          <SidebarMenu
+            sidebarVisible={sidebarVisible}
+            dropdownTopVisible={dropdownToggle}
+            updateSidebarVisibility={resetSidebarVisibility}
+            resetOpenSidemenu={resetOpenSidemenu}
+          />
+        )}
       </div>
       <div id="dropdown__top" className="dropdown" style={dropdownToggle}>
         <h4 style={{ color: "#fff" }}>dropdown</h4>
