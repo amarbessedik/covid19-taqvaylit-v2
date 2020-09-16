@@ -13,7 +13,7 @@
 }
 .links ul li a {
   text-decoration: none;
-  color: #666;
+  color: #5F6368;
   /* color: var(--bg); */
   font-size: 0.75rem;
   /* font-weight: 400; */
@@ -43,7 +43,7 @@
   background: var(--bg);
 }
 .navLink__icon {
-  color: #aaa !important;
+  color: #5F6368 !important;
   font-size: 0.9rem !important;
   display: inline !important;
 }

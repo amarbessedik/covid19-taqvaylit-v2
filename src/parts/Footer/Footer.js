@@ -15,22 +15,20 @@ function Footer() {
             style={{
               padding: 0,
               marginBottom: "5px",
-              color: "var(--middleRed)",
+              color: "#008FFB",
             }}
           >
-            &copy;
             <span>AMḌFAR AGREƔLAN N ANFAFAD N CURUNA WIS-2 (aCuW-2)</span>{" "}
           </h4>
         </li>
         <li style={center}>
-          <span style={{ textTransform: "uppercase", fontSize: ".8rem" }}>
-            AJNYUR ASELEKIMAN AMAR BESSEDIK <br /> MARIKAN UFLLA, ƔUCT 2020{" "}
+          <span style={{ textTransform: "uppercase", fontSize: ".7rem" }}>
+            &copy; AJENYUR N USELKIMAN AMAR BESSEDIK <br /> MARIKAN UFLLA, ƔUCT
+            2020{" "}
             {!new Date().getFullYear() === 2020
               ? " - " + new Date().getFullYear()
               : null}
           </span>
-
-          <h5>amar.bessedik@gmail.com</h5>
         </li>
       </ul>
       <br />

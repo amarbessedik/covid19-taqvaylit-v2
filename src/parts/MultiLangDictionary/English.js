@@ -6,7 +6,7 @@ function English({ english }) {
       style={{ display: english ? "block" : "none" }}
       className="english lang"
     >
-      <h4 style={{ color: "var(--charcoal)" }}>[ TAMAZIƔT AR TAGLIZZIT ]</h4>
+      <h4 style={{ color: "var(--charcoal)" }}>[ TAMAZIƔT AR TEGLIZIT ]</h4>
       <br />
       <div>
         <p>TIGGTIN: K = 1000, M = 1000000</p>

@@ -44,7 +44,6 @@ const Tapp = () => {
   const [mapCountries, setMapCountries] = useState([]);
   //cases types -> {cases, recovered, deaths}
   const [casesType, setCasesType] = useState("cases");
-  
 
   const handleToggleLinks = () => {
     window.innerWidth <= 768 ? setToggleLinks(true) : setToggleLinks(false);
@@ -135,7 +134,10 @@ const Tapp = () => {
 
   const onCountryChange = async (e) => {
     e.preventDefault();
-    const countryCode = e.target.value;
+    let countryCode = e.target.value;
+    if (countryCode === "AMAḌAL") {
+      countryCode = "worldwide";
+    }
 
     const url =
       countryCode === "worldwide"
@@ -147,17 +149,20 @@ const Tapp = () => {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
-        if (countryCode !== "worldwide")
+        if (countryCode !== "worldwide"){
           setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-        setMapZoom(4);
+        setMapZoom(4);}
+        else{
+          setMapZoom(2);
+        }
       });
   };
 
   return (
     <div className="app">
       <Navbar
-       resetSidebarVisibility = {resetSidebarVisibility}
-       sidebarVisible={sidebarVisible}
+        resetSidebarVisibility={resetSidebarVisibility}
+        sidebarVisible={sidebarVisible}
         updateSidebarVisibility={updateSidebarVisibility}
         screenBreakpoint={screenBreakpoint}
         toggleLinks={toggleLinks}
@@ -186,7 +191,7 @@ const Tapp = () => {
               onChange={onCountryChange}
             >
               <MenuItem key="0" value="worldwide">
-                <span>Worldwide</span>
+                <span>AMAḌAL</span>
               </MenuItem>
               {
                 /* loop through all countries and display each as an option */

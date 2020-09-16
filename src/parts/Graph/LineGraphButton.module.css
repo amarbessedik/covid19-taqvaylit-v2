@@ -1,14 +1,15 @@
 .lineGraphButton{
-  /* background: #20232a!important; */
-  /* color: #fff !important; */
+  color: #fff !important;
   width: 10rem;
   height: 35px;
   box-shadow: 0 0 8px -5px #000;
+  /* background: #0655EE!important; */
+  background: #008FFB!important;
+  border: 1px solid transparent!important;
 }
 
 .lineGraphButton:hover{
-  background: #fff!important;
-  color: #000 !important;
+  background: #4380fa!important;
   box-shadow: 0 0 12px -5px #000;
 }
 

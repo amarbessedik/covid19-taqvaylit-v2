@@ -28,22 +28,22 @@ function MultiLangDictionary() {
   };
 
   const btn__active__style = {
-    color: "rgba(0, 143, 251, 0.85)",
-    background: "transparent",
+    color: "#FFF",
+    background: "#282C34",
   };
 
   const btn__inactive__style = {
-    background: "rgba(0, 143, 251, 0.85)",
-    color: "var(--lavenderWeb)",
+    background: "#F0F2F3",
+    color: "#282C34",
   };
-
+ 
   return (
     <div className={styles.multiLang__container}>
-      <h2 style={{ color: "var(--middleRed)", marginBottom: "25px" }}>
+      <h3 style={{ color: 'var(--middleRed)', marginBottom: "25px" }}>
         {" "}
         ASEGZAWAL - {english ? "DICTIONARY" : null}{" "}
         {french ? "DICTIONAIRE" : null} {arabic ? " قاموس" : null} :{" "}
-      </h2>
+      </h3>
       <ButtonGroup
         className={styles.language__chooser}
         variant="contained"

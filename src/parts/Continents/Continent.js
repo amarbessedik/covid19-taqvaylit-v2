@@ -48,7 +48,7 @@ class Continent extends Component {
               className={styles.continent__graph__btn}
               type="button"
             >
-              {!this.state.btnToggle ? "Isɣaṛen" : "Taẓayeṛt"}
+              {!this.state.btnToggle ? "Tifggagin" : "Taẓayeṛt"}
             </button>
           </div>
           <div

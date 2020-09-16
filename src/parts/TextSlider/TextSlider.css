@@ -3,10 +3,10 @@
   overflow:hidden;
   background-color: #ffffff;
   margin: .5em auto;
-  height: auto;
+  height: 35px;
   font-size: 1em;
   color: #354B54;
-  padding: 10px 5px;
+  padding: 5px;
   border-radius: 3px;
   box-shadow: 0 0 7px -4px #999;
 }

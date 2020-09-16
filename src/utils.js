@@ -78,19 +78,20 @@ export const buildChartData2 = (data, casesType) => {
 export const casesTypeColors = {
   cases: {
     hex: "#062BD1",
-    border: "rgba(0, 143, 251, 0.85)",
-    fill: "rgba(0, 143, 251, 0.5)",
-    multiplier: 800,
+    border: "rgba(0,0,0,.8)",
+    fill: "#008FFB",
+    multiplier: 700,
   },
+
   recovered: {
     hex: "rgb(61, 235, 191)",
-    border: "#7DD71D",
+    border: "rgba(0,0,0,.8)",
     fill: "rgba(61, 235, 191, 0.5)",
     multiplier: 800,
   },
   deaths: {
     hex: "#FB4443",
-    border: "#FB4443",
+    border: "rgba(0,0,0,.8)",
     fill: "rgba(251, 65, 65, 0.5)",
     multiplier: 1200,
   },

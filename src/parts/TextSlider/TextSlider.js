@@ -4,8 +4,8 @@ import "./TextSlider.css";
 const TextSlider = () => {
   const titles = [
     "AMḌFAR AGREƔLAN N ANFAFAD N CURUNA WIS-2 (aCuW-2)",
-    "Tamaziɣt tezmmer ula d nettat atteḍfer tamusni tatrart",
-    "Tamaziɣt ttamslayt am nettat am tiyaḍ.",
+    `YELL AGDUD YULI-N, YULI S TUTLAYT-IS ...`,
+    ``,
   ];
 
   const [index, setIndex] = useState(0);
@@ -31,7 +31,7 @@ const TextSlider = () => {
 
   return (
     <div className={`main ${classToggle}`}>
-      <p>{index < titles.length ? titles[index] : "Aẓ ar zzat s tmaziɣt ..."}</p>
+      <p>{index < titles.length ? titles[index] : "ⵜⵓⴷⴻⵔⵜ ⵉ ⵜⵎⴰⵣⵉⵜ "}</p>
     </div>
   );
 };

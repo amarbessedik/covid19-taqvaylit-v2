@@ -9,18 +9,17 @@
   font-size: 0.9rem;
   border-top-left-radius: 0 !important;
   z-index: 999;
-  /* border: 1px solid #ccc; */
   box-shadow: 0 0 7px -4px #333;
   font-weight: 400!important;
   text-transform: lowercase;
-  
+  background: #F0F2F3;
 }
 .language__chooser {
   z-index: 0 !important;
 }
 
 .btn {
-  padding: 10px !important;
+  padding: 5px !important;
   font-size: 0.7rem !important;
   display: flex !important;
   justify-content: center !important;
