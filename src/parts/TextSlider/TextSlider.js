@@ -31,7 +31,11 @@ const TextSlider = () => {
 
   return (
     <div className={`main ${classToggle}`}>
-      <p>{index < titles.length ? titles[index] : "ⵜⵓⴷⴻⵔⵜ ⵉ ⵜⵎⴰⵣⵉⵜ "}</p>
+      <p>
+        {index < titles.length
+          ? titles[index]
+          : "ⴰⵎⴻⴹⴼⴰⵔ ⴰⴳⴻⵔⵖⵍⴰⵏ ⵏ ⴰⵏⴼⴰⴼⴰⴷ ⵏ ⴽⵓⵔⵓⵏⴰ ⵡⵉⵙ-2 "}
+      </p>
     </div>
   );
 };
